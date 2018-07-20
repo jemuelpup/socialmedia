@@ -1,0 +1,43 @@
+<div class="ratings-block mb1_5rem">
+  <div class="ratingsResult">
+    <h4>Market Ratings</h4>
+    <div class="rank">
+      <ng-container *ngFor="let x of productRank">
+        <fa-icon *ngIf="x==1" icon="star"></fa-icon>
+        <fa-icon *ngIf="x==0" [icon]="['far', 'star']"></fa-icon>
+      </ng-container>
+    </div>
+    <p class="rating-rate"><span class="result">30</span> out of 50</p>
+    <div class="rating-data"></div>
+  </div>
+  <div class="ratingsVotes">
+    <p>Based on 50 reviews</p>
+    <ul>
+      <li>
+        <span>5 star</span>
+        <div class="line-graph"><div class="bar"></div></div>
+        <span>10</span>
+      </li>
+      <li>
+        <span>4 star</span>
+        <div class="line-graph"><div class="bar"></div></div>
+        <span>10</span>
+      </li>
+      <li>
+        <span>3 star</span>
+        <div class="line-graph"><div class="bar"></div></div>
+        <span>10</span>
+      </li>
+      <li>
+        <span>2 star</span>
+        <div class="line-graph"><div class="bar"></div></div>
+        <span>10</span>
+      </li>
+      <li>
+        <span>1 star</span>
+        <div class="line-graph"><div class="bar"></div></div>
+        <span>10</span>
+      </li>
+    </ul>
+  </div>
+</div>

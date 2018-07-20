@@ -1,0 +1,35 @@
+<div 
+class="chat-list" 
+[ngClass]="{'minimizeChatbox':!g.chatlistOpened}">
+	<p 
+	class="title" 
+	(click)="g.chatlistOpened=!g.chatlistOpened">Chat list</p>
+	<div *ngIf="g.chatlistOpened">
+		<div class="chat-container">
+			<ul class="list">
+				<li *ngFor="let chatMember of chatList">
+					<app-chat-member 
+					[chatMemberData]=chatMember 
+					(click)="getChatMember(chatMember)">
+					</app-chat-member>
+				</li>
+			</ul>
+		</div>
+		<div class="search-chat">
+			<div class="input-group">
+			  <input 
+			  type="text" 
+			  class="form-control" 
+			  placeholder="Username" 
+			  aria-label="Username" 
+			  aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<!-- Development -->
+		<p 
+		class="development"
+		(click)="setAdminSender()"
+		[ngClass] = "{'active':adminSender}">(prototype)</p>
+		<!-- Development -->
+	</div>
+</div>

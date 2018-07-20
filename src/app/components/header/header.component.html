@@ -1,0 +1,41 @@
+<header>
+	<div class="header-elements">
+		<button class="hamburger" type="button" (click)="openAside=true">
+		  <span class="hamburger-box" [ngClass]="{'active':active}" (click)="active=!active;">
+		    <span class="hamburger-inner"></span>
+		  </span>
+		</button>
+		<h1 class="title">
+			<span class="text">Where Are You?</span>
+			<span class="logo"><img src="../../assets/logo.svg" alt="Where are you logo"></span>
+		</h1>
+		<div class="search" *ngIf="!mobileSearchActivated">
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="Search" aria-label="Keyword">
+			  <div class="input-group-append">
+			    <span class="input-group-text btn" id="Search"><fa-icon style="color: white;" icon="search"></fa-icon></span>
+			  </div>
+			</div>
+		</div>
+		<span class="flexSpace"></span>
+		<ul class="headerLinks">
+			<li [ngStyle]="{'color':'#fff'}" (click)="toggleChatList()"><fa-icon icon="comments"></fa-icon></li>
+			<li *ngIf="!authenticated"><a [routerLink]="['login']">Login</a></li>
+			<li *ngIf="authenticated"><a (click)="logout()">Logout</a></li>
+		</ul>
+	</div>
+	<div class="mobileSearch" *ngIf="mobileSearchActivated">
+		<div class="search">
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="Search" aria-label="Keyword">
+			  <div class="input-group-append">
+			    <span class="input-group-text btn" id="Search"><fa-icon style="color: white;" icon="search"></fa-icon></span>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<app-aside 
+		(asideEvent) = "childrenEvents($event)"
+		[openAside] = openAside
+	></app-aside>
+</header>

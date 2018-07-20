@@ -1,0 +1,9 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+.footer{
+	background-color: $color-primary;
+	color: #fff;
+	padding-right: 15px;
+    padding-left: 15px;
+}

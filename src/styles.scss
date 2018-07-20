@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/scss/variables.scss';
+@import './assets/scss/functions.scss';
+
+
+li{
+	list-style-type: none;
+}
+html { font-size: 14px; }
+body {min-height:100%; height:auto;}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.area-title{
+	font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.area-subtitle{
+	font-size: 1.2rem;
+	color: #454fc7;
+	font-size: 20px;
+	border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.mb1_5rem{
+	margin-bottom: 1.5rem;
+}
+.mr0_5rem{
+	margin-right: 0.5rem;
+}
+.form-control.ng-touched.ng-invalid{
+	border: 2px solid #ff6d6d;
+}

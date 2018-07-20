@@ -1,0 +1,22 @@
+.chatArea{
+	position: fixed;
+	z-index: 99;
+	// width: 100%!important;
+	height: 22rem;
+	width: 17rem;
+	overflow: hidden;
+	bottom: 0;
+	right: 0;
+}
+.chatQueue{
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	right: 17rem;
+	bottom: 0;
+}
+@media only screen and (max-width: 667px) {
+	.chatQueue{
+		right: 0.25rem;
+	}
+}

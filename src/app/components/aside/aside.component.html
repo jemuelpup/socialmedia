@@ -1,0 +1,80 @@
+<aside [ngClass]="{'active':openAside}">
+	<div class="logo">
+		<h1><img src="../../assets/logo.svg" alt="Where are you logo"></h1>
+	</div>
+	<div class="container">
+	<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+	  <ngb-panel title="Family">
+	    <ng-template ngbPanelContent>
+	    	<ul>
+	    		<a [routerLink]="['home']">Home</a>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    	</ul>
+	    </ng-template>
+	  </ngb-panel>
+	  <ngb-panel title="Market">
+	    <ng-template ngbPanelContent>
+	    	<ul>
+				<li><a href="#">Computers</a>
+				<li><a href="#">Gadgets</a>
+				<li><a href="#">Furnitures</a>
+				<li><a href="#">Clothing</a>
+				<li><a href="#">Accessories</a>
+				<li><a href="#">Books</a>
+				<li><a href="#">Sports</a>
+				<li><a href="#">Motorcycles</a>
+				<li><a href="#">Construction</a>
+				<li><a href="#">Farming</a>
+				<li><a href="#">Automotive</a>
+				<li><a href="#">Bikes</a>
+				<li><a href="#">Real Estate</a>
+				<li><a href="#">Books</a>
+				<li><a href="#">Others</a>
+	    	</ul>
+	    </ng-template>
+	  </ngb-panel>
+	  <ngb-panel title="Groups">
+	    <ng-template ngbPanelContent>
+	    	<ul>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    	</ul>
+	    </ng-template>
+	  </ngb-panel>
+	  <ngb-panel title="Meetings">
+	    <ng-template ngbPanelContent>
+	    	<ul>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    	</ul>
+	    </ng-template>
+	  </ngb-panel>
+	  <ngb-panel title="Buisness">
+	    <ng-template ngbPanelContent>
+	    	<ul>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    		<li><a href="#">Testing</a></li>
+	    	</ul>
+	    </ng-template>
+	  </ngb-panel>
+	</ngb-accordion>
+	</div>
+</aside>
+<div 
+	class="overlay"
+	[ngClass]="{'active':openAside}"
+	(click)="closeAside()"
+></div>

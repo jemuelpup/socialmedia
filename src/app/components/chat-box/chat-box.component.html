@@ -1,0 +1,18 @@
+<div class="chat" [ngClass]="{'minimize' : minimizeChat}">
+	<div class="chat-name" (click)="minimizeChat = !minimizeChat">
+		<p>{{destination}}</p>
+		<span class="close" (click)="closeChatBoxTrigger()"><fa-icon style="color: white;" icon="times"></fa-icon></span>
+	</div>
+	<div class="chat-body" 
+	#scrollMe [scrollTop]="scrollMe.scrollHeight"
+	*ngIf="!minimizeChat">
+		<div class="chat-box-message" *ngFor="let msg of conversation | async" [ngClass]="[msg.senderID=='Me' ? 'user-msg' : 'friend-msg']">
+			<p>{{msg.msg}}</p>
+		</div>
+	</div>
+	<div class="message-area"
+	*ngIf="!minimizeChat">
+		<input type="text" [(ngModel)]="msg" class="message">
+		<button (click)="sendMessage(destination,msg)">Send</button>
+	</div>
+</div>

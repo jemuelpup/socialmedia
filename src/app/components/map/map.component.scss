@@ -1,0 +1,19 @@
+agm-map {
+  height: 300px;
+}
+
+@media only screen and (max-width: 800px) {
+    agm-map {
+	  height: 250px;
+	}
+}
+@media only screen and (max-width: 600px) {
+    agm-map {
+	  height: 200px;
+	}
+}
+@media only screen and (max-width: 450px) {
+    agm-map {
+	  height: 150px;
+	}
+}

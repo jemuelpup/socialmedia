@@ -1,0 +1,25 @@
+<div class="product">
+	<a class="product-details" [routerLink]="['productdetail']">
+		<div class="img-container">
+			<span class="sale-tag">{{product.discountPercentage}}%<br>Off</span>
+			<div class="ratings">Preffered</div>
+			<img src="{{product.image}}" alt="">
+			<p class="price">Php. {{product.price | number:'0.2'}} <span class="oldPrice">({{product.oldPrice | number:'0.2'}})</span></p>
+		</div>
+		<div class="productInfo">
+			<div class="rank">
+				<fa-icon *ngFor="let x of productRank" icon="star"></fa-icon>
+			</div>
+			<p class="title">{{product.name}}</p>
+			<p class="desc">{{product.description}}</p>
+		</div>
+	</a>
+	<div class="actions">
+		<ul>
+			<li><fa-icon icon="heart"></fa-icon></li>
+			<li><fa-icon icon="comments"></fa-icon></li>
+			<li><fa-icon icon="map-marker-alt"></fa-icon></li>
+			<li><fa-icon icon="thumbtack"></fa-icon></li>
+		</ul>
+	</div>
+</div>

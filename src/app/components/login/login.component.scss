@@ -1,0 +1,112 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+.login{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	width: 100%;
+	height:100vh;
+}
+.login-text{
+	font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #353535;
+    font-weight: 500;
+}
+.overlay{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height:100vh;
+	z-index: 199;
+	background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+.logo{
+	// background-color: $color-primary;
+	text-align: center;
+	padding: 1rem 0 0;
+	border-top-left-radius: 0.75rem;
+	border-top-right-radius: 0.75rem;
+	margin-bottom: 0;
+	img{
+		width: 100px;
+	}
+}
+
+.login-card{
+	position: relative;
+	height: auto;
+	min-height: 500px;
+	max-width: 400px;
+	min-width: 300px;
+	width: 35%;
+	background: #f6f9ff;
+	border: 2px solid #fff;
+	@include border-radius(0.75rem);
+	@include box-shadow($depth-5)
+    form{
+		padding: 18px 24px;
+		.btn{
+			background-color: $color-primary;
+			color: #f6f9ff;
+			width: 100%;
+			display: block;
+			margin-bottom: 1rem;
+			opacity: 1;
+			
+		}
+    }
+}
+.pointer-on-hover{
+	&:hover{
+		cursor: pointer;
+	}
+}
+.shake{
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+.login-button{
+	margin-top: 24px;
+}
+.login-message{
+	position: absolute;
+	bottom: 15px;
+}
+.invalid{
+	color: #d60d0d;
+    font-weight: 700;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

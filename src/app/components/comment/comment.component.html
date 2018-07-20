@@ -1,0 +1,23 @@
+<div class="comment-block">
+  <div class="user-icon">
+    <img src="../../assets/images/profile-pic.png" alt="">
+  </div>
+  <div class="content">
+    <p class="username mr0_5rem"><a href="">Jemuel Elimanco</a></p>
+    <div class="consumer-rating">
+	    <ng-container *ngFor="let x of productRank">
+	      <fa-icon *ngIf="x==1" icon="star"></fa-icon>
+	      <fa-icon *ngIf="x==0" [icon]="['far', 'star']"></fa-icon>
+	    </ng-container>
+    </div>
+    <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim temporibus debitis at quia distinctio est necessitatibus eos id culpa eligendi voluptatibus, labore velit hic minima? Illo dicta ut temporibus, nobis.</p>
+    <div class="actions">
+      <ul class="actions-data">
+        <li [ngStyle]="{'color':'#ff0000'}">
+          <fa-icon icon="heart"></fa-icon><span>(23)</span></li>
+        <li [ngStyle]="{'color':'#768fff'}">
+          <fa-icon icon="comments"></fa-icon>(13)</li>
+      </ul>
+    </div>
+  </div>
+</div>

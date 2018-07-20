@@ -1,0 +1,50 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+.ratings-block{
+	border: 1px solid $color-primary-light;
+	padding: 1rem 1.5rem;
+	display: flex;
+	.rank{
+		color: $color-secondary;
+		font-size: 2rem;
+	}
+	.rating-rate{
+		font-size: 1.25rem;
+		font-weight: 500;
+		color: #222;
+		margin-bottom: 0;
+		.result{
+			font-size: 2rem;
+		}
+	}
+	.ratingsVotes{
+		margin-left: 2rem;
+		border-left: 1px solid #ccc;
+		padding-left: 2rem;
+
+		p{
+			font-weight: 500;
+			color: #2d2d2d;
+		}
+		ul{
+			padding-left: 0;
+			li{
+				display: flex;
+				align-items: center;
+				.line-graph{
+					width: 10rem;
+					height: 1rem;
+					border: 1px solid #ccc;
+					margin: 0 1rem;
+					@include border-radius(3px);
+					.bar{
+						width: 30%;
+						height: 100%;
+						background-color: $color-secondary;
+					}
+				}
+			}
+		}
+	}
+}

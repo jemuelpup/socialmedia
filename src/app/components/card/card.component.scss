@@ -1,0 +1,122 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+.card{
+	margin-bottom: 1rem;
+	@include box-shadow($depth-1);
+}
+    
+.post-owner-info{
+	display: flex;
+	.owner-image{
+		flex-grow: 0;     /* do not grow   - initial value: 0 */
+		flex-shrink: 0;   /* do not shrink - initial value: 1 */
+		flex-basis: 4rem;
+		margin-right: 1rem;
+		img{
+			width: 100%;
+			@include border-radius(100%);
+		}
+	}
+	.details{
+		.name,
+		.post-owner-comment{
+			margin-top: 0;
+	    	margin-bottom: 0.25rem;
+		}
+		.name{
+			font-weight: 700;
+			color: $color-primary;
+		}
+		.post-owner-comment{
+			font-size: 1rem;
+		}
+	}
+}
+
+.img-container{
+	padding: 0 0.5rem;
+	.gallery-count-1{
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+}
+.card-title{
+	color: $color-primary;
+}
+.post-owner-info,
+.card-body{
+	padding: .75rem 1.25rem;
+	.card-desc{
+		font-size: 0.8571rem;
+	}
+}
+.post-actions{
+	border-top: 1px solid #ccc;
+	padding-left: 0;
+	li{
+		display: inline-block;
+		width: 33.333333333333%;
+		text-align: center;
+		a{
+			display: block;
+			padding: 0.25rem 0;
+		}
+	}
+}
+.comment-input-block{
+	border-top: 1px solid #ccc; 
+	padding: 1rem;
+	.user-profile-icon{
+		display: flex;
+		.owner-image{
+			flex-grow: 0;     /* do not grow   - initial value: 0 */
+			flex-shrink: 0;   /* do not shrink - initial value: 1 */
+			flex-basis: 2.5rem;
+			margin-right: 0.5rem;
+			img{
+				width: 100%;
+				@include border-radius(100%);
+			}
+		}
+		.comment{
+			width: 100%;
+			input[type="text"]{
+				width: 100%;
+				border: 1px solid #ccc;
+				padding: 0 0.25rem;
+				@include border-radius(0.25rem);
+				margin-bottom: 0.5rem;
+			}
+			.comment-btn{
+				padding: 0.25rem 1rem;
+				background-color: $color-primary-dark;
+				color: #fff;
+				border: 0;
+				@include border-radius(0.25rem);
+				float: right;
+				font-size: 12px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 1100px){
+	.main-container{
+		margin-left: 250px;
+	}
+	.post-container{
+		width: 100%;
+		padding: 0 200px 0 0;
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.post-owner-info{
+		display: flex;
+		.owner-image{
+			flex-basis: 3rem;
+		}
+	}
+}

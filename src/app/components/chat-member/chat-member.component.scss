@@ -1,0 +1,58 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+.chat-data{
+	// overflow: hidden;
+	display: table;
+	&:hover{
+		cursor: pointer;
+	}
+	&:hover{
+		background-color: #f1f1f1;
+	}
+}
+
+.picture {
+	position: relative;
+	padding-left: 1rem;
+	display: table-cell;
+	p {
+	  width: 2.5rem;
+	  height: 2.5rem;
+	  margin-bottom: 0;
+	  img {
+	    width: 100%;
+	    @include border-radius(100%);
+	  }
+	}
+	&:before {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  top: 50%;
+	  margin-top: -0.25rem;
+	  width: 0.5rem;
+	  height: 0.5rem;
+	  background-color: #ccc;
+	  @include border-radius(100%);
+	}
+	&.active {
+	  &:before {
+	    background-color: #39b54a;
+	  }
+	}
+}
+.chat-info {
+	display: table-cell;
+	padding-left: 1rem;
+	vertical-align: top;
+	.name {
+	  margin-bottom: 0;
+	  font-weight: 500;
+	}
+	.email {
+	  font-size: 12px;
+	  line-height: 0.75;
+	  margin-bottom: 0;
+	}
+}

@@ -1,0 +1,26 @@
+.product-slider{
+	overflow: hidden;
+	ul.nav{
+		display: block;
+		float: left;
+		width: 15%;
+		padding: 0 10px;
+		li{
+			border: 1px solid #ccc;
+			padding: 5px;
+			margin-bottom: 10px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.slider{
+		float: left;
+		width: 85%;
+		padding: 1rem;
+		border: 1px solid #ccc;
+		img{
+			width: 100%;
+		}
+	}
+}

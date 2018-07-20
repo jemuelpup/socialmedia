@@ -1,0 +1,157 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+@mixin burger-lines(){
+	position: absolute;
+	background-color: #fff;
+    height: 3px;
+    width: 100%;
+    display: block;
+	@include transition(transform 250ms linear);
+}
+
+header{
+	background-color: $color-primary;
+	color: #fff;
+	padding: 0.5rem 2rem;
+	position: sticky;
+	top: 0;
+    z-index: 100;
+    margin-bottom: 0.75rem;
+	@include box-shadow($depth-2);
+	p,ul{
+		margin: 0;
+	}
+	h1{
+		font-size: 1.15rem;
+	}
+	ul.headerLinks{
+		padding-left: 0;
+		li{
+			display: inline-block;
+			margin-left: 1rem;
+			a{
+				color: #fff;
+				&:hover{
+					cursor: pointer;
+					text-decoration: none;
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+}
+
+.header-elements{
+
+	display: flex;
+	align-items: center;
+	align-content: center;
+}
+.search{
+	width: 200px;
+	#Search{
+		background-color: $color-primary-dark;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+.hamburger {
+    display: none;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+    margin-right: 1rem;
+	margin-top: 2px;
+    .hamburger-box {
+	    position: relative;
+	    display: inline-block;
+	    width: 30px;
+	    height: 15px;
+	    .hamburger-inner{
+			top: 50%;
+			@include burger-lines();
+		}
+	    &:before{
+	    	content: "";
+	    	top: 0;
+			transform-origin: 16% 50%;
+	    	@include burger-lines();
+	    }
+	    &:after{
+	    	content: "";
+			top: 100%;
+			margin-top: -1px;
+			transform-origin: 16% 50%;
+	    	@include burger-lines();
+	    }
+	    &.active{
+	    	.hamburger-inner{
+	    		@include transform(rotateY(90deg));
+	    	}
+	    	&:before{
+		    	@include transform(rotate(45deg));
+	    	}
+	    	&:after{
+		    	@include transform(rotate(-45deg));
+	    	}
+	    }
+
+	}
+}
+.title{
+	font-weight: 700;
+	// margin-top: 0.5rem;
+	// margin-right: 1rem;
+	margin: 0 1rem 0 0;
+	.logo{
+		display: none;
+	}
+}
+.mobileSearch{
+	margin-top: 0.5rem;
+	.search{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 830px){
+	.hamburger {
+	    display: inline-block;
+	}
+	.title{
+		margin-right: 1rem;
+		.logo{
+			width: 2rem;
+			display: block;
+			img{
+				width: 100%;
+			}
+		}
+		.text{
+			display: none;
+		}
+	}
+	aside{
+		left:-320px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+    header{
+		padding: 0.75rem;
+	}
+}
+@media only screen and (max-width: 450px) {
+    header{
+    	heith
+		.headerLinks{
+			// change the following later including the name
+			// display: none;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+.ads-block{
+	position: fixed;
+	top: 4.75rem;
+	right: 0;
+	z-index: 0;
+	height: 100vh;
+	width: 250px;
+	padding: 0 1rem;
+}
+@media only screen and (max-width: 1100px){
+	.ads-block{
+		width: 200px;
+	}
+}
+@media only screen and (max-width: 540px){
+	.ads-block{
+		//make this position absolute and display
+		display: none;
+	}
+}

@@ -1,0 +1,10 @@
+<div class="chatArea" [ngStyle]="{'width': chatAreaWidth+'rem'}">
+	<p>Dev mode</p>
+	<div class="chatQueue">
+		<app-chat-box *ngFor="let chatData of activeChats" 
+		[chatData]="chatData"
+		(closeChatBoxEvent)="closeChatbox($event)"></app-chat-box>
+	</div>
+	<app-chat-list (chatMemberEvent)="openChatMember($event)"></app-chat-list>
+</div>
+<!--  -->

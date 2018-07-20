@@ -1,0 +1,138 @@
+@import '../../../assets/scss/variables.scss';
+@import '../../../assets/scss/functions.scss';
+
+ul{
+	padding-left: 0;
+}
+ul.breadcrumbs{
+	overflow: hidden;
+	li{
+		position: relative;
+		float: left;
+		margin-right: 1.5rem;
+		padding-right: 1.5rem;
+		&:after{
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 7px;
+			height: 7px;
+			border-right: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			@include transform(translateY(-50%) rotate(315deg));
+		}
+		&:last-child{
+			&:after{
+				width: 0;
+				height: 0;
+				border-right: 0;
+				border-bottom: 0;
+			}
+		}
+	}
+}
+.contact-block{
+	dl{
+		margin-bottom: 0.75rem;
+		dt{
+			font-weight: 500;
+			overflow: hidden;
+			float: left;
+			width: 9rem;
+			margin-right: 1.5rem;
+			&:after{
+				content: ":";
+				float: right;
+			}
+		}
+		dd{
+			color: $color-primary-dark;
+			a{
+				color: $color-primary-dark;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+.product-detail{
+	margin-bottom: 3rem;
+}
+
+.description-block{
+	padding: 1rem 0;
+	margin-bottom: 2rem;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	p:last-child{
+		margin-bottom: 0;
+	}
+}
+.productInformation{
+	.title{
+		font-size: 2.5rem;
+		margin-bottom: 0.5rem;
+		line-height: 1;
+	}
+	.price{
+		color: $color-primary-dark;
+		font-size: 2rem;
+		margin-bottom: 0.25rem;
+	}
+	.brand{
+		padding-bottom: 1rem;
+		
+		span{
+			color: $color-primary-dark;
+		}
+	}
+	.rating{
+		display: flex;
+		margin-bottom: 1rem;
+		margin-left: -5px;
+		.rank{
+			font-size: 1.2rem;
+			margin-left: 0.25rem;
+			color: $color-secondary;
+		}
+	}
+}
+.specification{
+	
+	h4{
+		color: #3a3a3a;
+		font-size: 1.2rem;
+		margin-bottom: 1.5rem;
+	}
+	ul.features{
+		background-color: #f2f2f2;
+		padding: 0.75rem 1rem;
+		overflow: hidden;
+		li{
+			width: 33.333333333%;
+			float: left;
+			padding: 0.25rem;
+		}
+	}
+}
+.comment-block{
+	padding: 0 1rem;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+	.specification ul.features li{
+		width: 50%;
+	}
+}
+
+
+@media only screen and (max-width: 450px) {
+	.specification ul.features li{
+		width: 100%;
+	}
+}

@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="post-owner-info">
+    <div class="owner-image">
+      <img src="{{post.postOwnerThumbnail}}" alt="Card image cap">
+    </div>
+    <div class="details">
+      <p class="name">{{post.postOwner}}</p>
+      <p class="post-owner-comment">{{post.postOwnerComment}}</p>
+    </div>
+  </div>
+  <div class="img-container">
+    <div class="gallery-count-1">
+      <img src="{{post.postImage}}" alt="Card image cap">
+    </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.postTitle}}</h5>
+    <p class="card-desc">{{post.postDesc}}</p>
+    <ul class="post-actions">
+      <li><a href="#">Like</a></li>
+      <li><a href="#">Comment</a></li>
+      <li><a href="#">Share</a></li>
+    </ul>
+  </div>
+  <div class="comment-area">
+    <div class="comment-input-block">
+      <div class="user-profile-icon">
+        <div class="owner-image">
+          <img src="{{post.postOwnerThumbnail}}" alt="Card image cap">
+        </div>
+        <div class="comment">
+          <input type="text" placeholder="Comment">
+          <button class="comment-btn">Comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

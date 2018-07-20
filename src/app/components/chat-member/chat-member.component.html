@@ -1,0 +1,10 @@
+<div class="chat-data">
+  <div class="picture" [ngClass]="{'active':chatMemberData.active}">
+    <p><img src="../../assets/images/profile-icon.png" alt="{{chatMemberData.name}}"></p>
+  </div>
+  <div class="chat-info">
+    <p class="name">{{chatMemberData.name}}</p>
+    <p class="email">{{chatMemberData.email}}</p>
+  </div>
+  <span class="notification">1</span>
+</div>
